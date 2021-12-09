@@ -31,6 +31,23 @@ namespace DataStructureProblems
             }
             Console.WriteLine("Element {0} added to the linked list", node.data);
         }
+        public void InsertEnd(int data)
+        {
+            Node node = new Node(data);
+            if (head == null)
+                head = node;
+            else
+            {
+                Node temp = head;
+                while(temp.next!=null)
+                {
+                    temp = temp.next;
+                }
+                temp.next = node;
+                
+            }
+            Console.WriteLine("Element {0} added to the linked list", node.data);
+        }
         public void Display()
         {
             Node temp = head;
