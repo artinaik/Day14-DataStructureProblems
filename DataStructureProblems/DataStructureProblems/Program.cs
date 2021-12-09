@@ -12,7 +12,10 @@ namespace DataStructureProblems
         {
             Console.WriteLine("Welcome to Data structure problems");
             LinkedList list = new LinkedList();
-            list.Add(70);
+            list.InsertBegin(70);
+            list.InsertBegin(30);
+            list.InsertBegin(56);
+            list.Display();
             Console.ReadKey();
         }
     }
