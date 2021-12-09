@@ -73,6 +73,14 @@ namespace DataStructureProblems
             Console.WriteLine("Element {0} added to the linked list", node.data);
             return head;
         }
+        public Node Pop()
+        {
+                if (head == null)
+                    return null;
+                head = head.next;
+                return head;
+          
+        }
         public void Display()
         {
             Node temp = head;
