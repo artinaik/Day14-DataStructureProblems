@@ -11,6 +11,9 @@ namespace DataStructureProblems
         static void Main(string[] args)
         {
             Console.WriteLine("Welcome to Data structure problems");
+            LinkedList list = new LinkedList();
+            list.Add(70);
+            Console.ReadKey();
         }
     }
 }
