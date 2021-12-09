@@ -13,8 +13,8 @@ namespace DataStructureProblems
             Console.WriteLine("Welcome to Data structure problems");
             LinkedList list = new LinkedList();
             list.InsertEnd(56);
-            list.InsertEnd(30);
             list.InsertEnd(70);
+            list.InsertMiddle(30,2);
             list.Display();
             Console.ReadKey();
         }

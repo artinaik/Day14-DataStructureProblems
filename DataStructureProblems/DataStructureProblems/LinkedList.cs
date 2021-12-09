@@ -48,6 +48,31 @@ namespace DataStructureProblems
             }
             Console.WriteLine("Element {0} added to the linked list", node.data);
         }
+        public Node InsertMiddle(int data,int position)
+        {
+            Node node = new Node(data);
+            if (position < 1)
+                Console.WriteLine("Invalid position");
+            else
+            {
+                Node temp = this.head;
+                while (position-- != 0)
+                {
+
+                    if (position == 1)
+                    {
+                        node.next = head.next;
+                        head.next = node;
+                        break;
+                    }
+                    temp = temp.next;
+                }
+                if (position != 1)
+                    Console.WriteLine("Position out of range");
+            }
+            Console.WriteLine("Element {0} added to the linked list", node.data);
+            return head;
+        }
         public void Display()
         {
             Node temp = head;
