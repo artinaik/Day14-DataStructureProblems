@@ -16,8 +16,9 @@ namespace DataStructureProblems
             list.InsertEnd(70);
             list.InsertMiddle(30,2);
             //list.Pop();
-            list.PopLast();
+            //list.PopLast();
             list.Display();
+            list.Search(30);        
             Console.ReadKey();
         }
     }

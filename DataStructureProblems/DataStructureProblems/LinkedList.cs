@@ -93,6 +93,20 @@ namespace DataStructureProblems
             temp.next = null;
             return head;
         }
+        public Node Search(int value)
+        {
+            Node temp = head;
+            if (temp == null)
+                Console.WriteLine("Linked List is empty");
+            else
+                while (temp.next != null)
+                {
+                    temp = temp.next;
+                    if(temp.data==value)
+                       Console.WriteLine("Present");
+                }
+            return null;
+        }
         public void Display()
         {
             Node temp = head;
