@@ -127,7 +127,38 @@ namespace DataStructureProblems
                 }
             }
             head = temp;
+            return null;
+        }
+        public Node Delete(int data)
+        {
+            Node temp = head;
+            Node Previous = head;
+            Node search = Search(data);
+            while (Previous != null)
+            {
+                if (Previous.next == search)
+                {
+                    Previous.next = search.next;
+                    break;
+                }
+                Previous = Previous.next;
+            }
+            head = temp;
             return head;
+        }
+        public int Size()
+        {
+            int count = 0;
+            Node temp = head;
+            if (temp == null)
+                Console.WriteLine("Linked List is empty");
+            else
+                while (temp != null)
+                {
+                    temp = temp.next;
+                    count++;
+                }
+            return count;
         }
         public void Display()
         {
@@ -140,7 +171,6 @@ namespace DataStructureProblems
                     Console.WriteLine("{0}  ",temp.data);
                     temp = temp.next;
                 }
-            
         }
 
     }

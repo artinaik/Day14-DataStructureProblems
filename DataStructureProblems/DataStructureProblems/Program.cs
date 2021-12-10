@@ -21,6 +21,9 @@ namespace DataStructureProblems
             //list.Search(56);
             list.InsertAfter(30, 40);
             list.Display();
+            list.Delete(40);
+            list.Display();
+            Console.WriteLine("Size of linked list is : "+list.Size());
             Console.ReadKey();
         }
     }
