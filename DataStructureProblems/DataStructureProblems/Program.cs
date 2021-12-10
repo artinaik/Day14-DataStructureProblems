@@ -18,7 +18,9 @@ namespace DataStructureProblems
             //list.Pop();
             //list.PopLast();
             list.Display();
-            list.Search(30);        
+            //list.Search(56);
+            list.InsertAfter(30, 40);
+            list.Display();
             Console.ReadKey();
         }
     }

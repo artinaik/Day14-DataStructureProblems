@@ -95,17 +95,39 @@ namespace DataStructureProblems
         }
         public Node Search(int value)
         {
-            Node temp = head;
-            if (temp == null)
+            if (head == null)
                 Console.WriteLine("Linked List is empty");
             else
-                while (temp.next != null)
+                while (head!= null)
                 {
-                    temp = temp.next;
-                    if(temp.data==value)
-                       Console.WriteLine("Present");
+                    if (head.data == value)
+                    {
+                        Console.WriteLine("{0} is Present in list", head.data);
+                        return head;
+                    }
+                    head = head.next;
                 }
-            return null;
+            return null;      
+        }
+        public Node InsertAfter(int search,int data)
+        {
+            Node temp = head;
+            Node searchnode= Search(search);
+            Node node = new Node(data);
+            while(head != null)
+            {
+                if (head == searchnode.next)
+                {
+                    searchnode.next = node;
+                    searchnode.next.next = head;
+                }
+                else
+                {
+                    head = head.next;
+                }
+            }
+            head = temp;
+            return head;
         }
         public void Display()
         {
@@ -115,7 +137,7 @@ namespace DataStructureProblems
             else
                 while(temp!=null)
                 {
-                    Console.Write("{0}  ",temp.data);
+                    Console.WriteLine("{0}  ",temp.data);
                     temp = temp.next;
                 }
             
