@@ -160,6 +160,28 @@ namespace DataStructureProblems
                 }
             return count;
         }
+        public void SortList()
+        {
+            Node first = head;
+            Node second;
+            int temp;
+            while(first!=null)
+            {
+                second = first.next;
+                while(second!=null)
+                {
+                    if (first.data.CompareTo(second.data) > 0)
+                    {
+                        temp = first.data;
+                        first.data= second.data;
+                        second.data= temp;
+
+                    }
+                    second = second.next;
+                }      
+                first = first.next;
+            }
+        }
         public void Display()
         {
             Node temp = head;
